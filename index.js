@@ -4,11 +4,12 @@ require("dotenv").config();
 const {PORT} = process.env || 3001
 const app = express();
 const cors = require("cors");
-
+const morgan = require("morgan")
 //DB Connection
 dbConnection()
 
 app.use(cors());
+app.use(morgan("dev"))
 app.use( express.static("public") );
 
 

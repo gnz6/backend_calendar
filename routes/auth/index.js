@@ -23,7 +23,7 @@ router.post("/login",
      validateFields
     ], login)
 
-router.post("/refresh", validateJWT , refreshToken)
+router.get("/refresh", validateJWT , refreshToken)
 
 
 module.exports = router;
